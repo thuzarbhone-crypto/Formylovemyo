@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>For My Love</title>
+<style>
+body{
+margin:0;
+background:black;
+color:white;
+font-family:Georgia, serif;
+text-align:center;
+overflow:hidden;
+}
+#start{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+font-size:24px;
+cursor:pointer;
+}
+#scene{
+display:none;
+padding-top:50px;
+animation:fade 3s ease forwards;
+}
+@keyframes fade{
+from{opacity:0;}
+to{opacity:1;}
+}
+img{
+width:250px;
+margin:20px;
+border:5px solid gold;
+border-radius:10px;
+}
+.envelope{
+margin-top:30px;
+cursor:pointer;
+font-size:22px;
+color:pink;
+}
+.letter{
+display:none;
+margin:30px;
+max-width:800px;
+margin-left:auto;
+margin-right:auto;
+line-height:1.8;
+}
+</style>
+</head>
+<body>
+
+<div id="start" onclick="startExperience()">Tap to Begin ❤️</div>
+
+<div id="scene">
+<h2>Happy Valentine Day My Love Myo Thu Zar</h2>
+
+<img src="photo1.jpg">
+<img src="photo2.jpg">
+
+<div class="envelope" onclick="openLetter()">💌 အချစ်ရဆုံး သို့</div>
+
+<div class="letter" id="letter">
+အချစ်ရဆုံးရေ Happy Valentine Day ပါ...
+(မင်းရေးထားတဲ့စာကို ဒီနေရာမှာ paste လုပ်)
+</div>
+
+<audio id="music" src="music.mp3" loop></audio>
+
+</div>
+
+<script>
+function startExperience(){
+document.getElementById("start").style.display="none";
+document.getElementById("scene").style.display="block";
+document.getElementById("music").play();
+}
+function openLetter(){
+document.getElementById("letter").style.display="block";
+}
+</script>
+
+</body>
+</html>
